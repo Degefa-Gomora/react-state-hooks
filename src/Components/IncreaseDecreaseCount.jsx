@@ -17,7 +17,7 @@ function IncreaseDecreaseCount() {
 
   return (
     <div>
-      <h2>Count: {count}</h2>
+      <h2 className="count">Count: {count}</h2>
       <button onClick={increaseCount}>Increase</button>
       <button onClick={decreaseCount}>Decrease</button>
       <button onClick={resetCount}>Reset</button>

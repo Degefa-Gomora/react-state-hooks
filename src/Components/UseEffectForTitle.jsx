@@ -25,7 +25,7 @@ function UseEffectForTitle() {
   return (
     <div>
       <button onClick={incrementCount}>Click me</button>
-      <p>Count: {count}</p>
+      <p className="count">Count: {count}</p>
     </div>
   );
 }

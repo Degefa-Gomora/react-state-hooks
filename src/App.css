@@ -1,6 +1,7 @@
 .App{
   text-align: center;
   background-color: gainsboro;
+  padding: 2px 4px 5px;
 }
 button{
   background-color: green;
@@ -8,7 +9,7 @@ button{
   margin-right: 10px
 }
 
-p{
-  color: #f39228;
-  font-weight: 1000;
+p,.count{
+  color: blue;
+  font-weight: 900;
 }
