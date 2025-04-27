@@ -8,13 +8,19 @@ function App() {
     <div className="App">
       <h1>React State and Hooks Practice</h1>
 
-      <h2>Question 1 & 2: Counter with Even Count Display</h2>
+      <h1>
+        <b>Question 1 & 2: Counter with Even Count Display</b>
+      </h1>
       <MyCounter />
 
-      <h2>Question 3: Increase/Decrease Counter</h2>
+      <h1>
+        <b>Question 3: Increase/Decrease Counter</b>
+      </h1>
       <IncreaseDecreaseCount />
 
-      <h2>Question 4: useEffect for Document Title</h2>
+      <h3>
+        <b>Question 4: useEffect for Document Title</b>
+      </h3>
       <UseEffectForTitle />
     </div>
   );

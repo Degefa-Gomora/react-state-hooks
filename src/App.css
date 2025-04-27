@@ -6,10 +6,12 @@
 button{
   background-color: green;
   color: white;
-  margin-right: 10px
+  margin-right: 10px;
+  font-size:20px;
 }
 
 p,.count{
   color: blue;
   font-weight: 900;
+
 }
