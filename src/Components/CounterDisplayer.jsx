@@ -5,7 +5,9 @@ class CounterDisplayer extends Component {
     const { data } = this.props; // destructuring 
     return (
       <div>
-        <h2>All Clicks counter: {data}</h2>
+        <h2 className="border p-3 text-success fw-bold">
+          All Clicks counter: {data}
+        </h2>
       </div>
     );
   }

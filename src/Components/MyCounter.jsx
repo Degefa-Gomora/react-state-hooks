@@ -62,19 +62,20 @@ class MyCounter extends Component {
       clickCount: 0,
       evenClickCount: 0,
     };
+    // this.allClicksCounter = this.allClicksCounter.bind(this)// bind this to regular function to acces state
   }
+  //Uses the previous state directly from React's update queue TO Prevents issues if multiple clicks happen before state updates completes
+  allClicksCounter = () => {
+    this.setState((prevState) => {
+      const newClickCount = prevState.clickCount + 1;
+      return {
+        clickCount: newClickCount,
+        evenClickCount:
+          newClickCount % 2 === 0 ? newClickCount : prevState.evenClickCount,
+      };
+    });
+  };
 
-allClicksCounter = () => {
-  this.setState((prevState) => {
-    const newClickCount = prevState.clickCount + 1;
-    return {
-      clickCount: newClickCount,
-      evenClickCount:
-        newClickCount % 2 === 0 ? newClickCount : prevState.evenClickCount,
-    };
-  });
-};
-//Uses the previous state directly from React's update queue; Prevents issues if multiple clicks happen before state updates complete
   render() {
     return (
       <div>
@@ -94,88 +95,6 @@ allClicksCounter = () => {
 }
 
 export default MyCounter;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//!with out prevstate
-// import React, { Component } from "react";
-
-// class MyCounter extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       clickCount: 0,
-//       evenClickCount: 0,
-//     };
-//   }
-
-//   // ❌ Problem: Uses `this.state` directly (can lead to stale state)
-//   allClicksCounter = () => {
-//     const newClickCount = this.state.clickCount + 1; // Depends on current state (may be outdated)
-//     console.log("Before update (stale state):", this.state.clickCount);
-
-//     this.setState(
-//       {
-//         clickCount: newClickCount,
-//         evenClickCount:
-//           newClickCount % 2 === 0 ? newClickCount : this.state.evenClickCount,
-//       },
-//       () => {
-//         console.log("After update:", this.state.clickCount); // Correct, but too late
-//       }
-//     );
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         <h3>Without prevState (Try rapid clicks!)</h3>
-//         <button
-//           className="btn btn-danger btn-lg"
-//           onClick={this.allClicksCounter}
-//         >
-//           Click here (Broken)
-//         </button>
-//         <div className="d-flex justify-content-center gap-3 mt-3">
-//           <div>
-//             <strong>Total Clicks:</strong> {this.state.clickCount}
-//           </div>
-//           <div>
-//             <strong>Even Clicks:</strong> {this.state.evenClickCount}
-//           </div>
-//         </div>
-//         <p className="text-muted mt-3">
-//           <strong>Issue:</strong> Rapid clicks may be missed because
-//           `this.state` is stale.
-//         </p>
-//       </div>
-//     );
-//   }
-// }
-
-// export default MyCounter;
 
 
 

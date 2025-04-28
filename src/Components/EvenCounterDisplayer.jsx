@@ -6,7 +6,9 @@ class EvenCounterDisplayer extends Component {
     const {evenClickCount} = this.props;
     return (
       <div>
-        <h2>Even clicks Counter: {evenClickCount}</h2>
+        <h2 className="border p-3 text-primary fw-bold">
+          Even clicks Counter: {evenClickCount}
+        </h2>
       </div>
     );
   }

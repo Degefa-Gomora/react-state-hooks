@@ -27,7 +27,9 @@ function UseEffectForTitle() {
         <button className="btn btn-success btn-lg" onClick={incrementCount}>
           Click here
         </button>
-        <p className="count">Count Displayer: {count}</p>
+        <p className="border p-3 text-primary fw-bold">
+          Count Displayer: {count}
+        </p>
       </div>
     </>
   );

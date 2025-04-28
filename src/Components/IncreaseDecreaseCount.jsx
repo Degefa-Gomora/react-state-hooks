@@ -17,7 +17,7 @@ function IncreaseDecreaseCount() {
 
   return (
     <div className="container text-center mt-5">
-      <h2 className="mb-4 text-primary">Count: {count}</h2>
+      <h2 className="mb-4 text-primary fw-bold">Count: {count}</h2>
       <div className="d-flex justify-content-center gap-3">
         <button className="btn btn-success btn-lg" onClick={increaseCount}>
           Increase Count
