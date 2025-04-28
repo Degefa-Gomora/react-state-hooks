@@ -78,7 +78,7 @@ class MyCounter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container text-center mt-5 border p-4 rounded border-danger border-3 border-box">
         <button
           className="btn btn-success btn-lg"
           onClick={this.allClicksCounter}
@@ -86,6 +86,7 @@ class MyCounter extends Component {
           Click here
         </button>
         <div className="d-flex justify-content-center gap-3">
+          {/* All clicks counter: {this.state.clickCount} if you do not need to transfer to other components */}
           <CounterDisplayer data={this.state.clickCount} />{" "}
           <EvenCounterDisplayer evenClickCount={this.state.evenClickCount} />
         </div>

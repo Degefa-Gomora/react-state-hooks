@@ -16,20 +16,21 @@ function IncreaseDecreaseCount() {
   };
 
   return (
-    <div className="container text-center mt-5">
-      <h2 className="mb-4 text-primary fw-bold">Count: {count}</h2>
-      <div className="d-flex justify-content-center gap-3">
-        <button className="btn btn-success btn-lg" onClick={increaseCount}>
-          Increase Count
-        </button>
-        <button className="btn btn-danger btn-lg" onClick={decreaseCount}>
-          Decrease Count
-        </button>
-        <button className="btn btn-warning btn-lg" onClick={resetCount}>
-          Reset Count
-        </button>
+    
+      <div className="container text-center mt-5 border p-4 rounded border-primary border-3 border-box">
+        <h2 className="mb-4 text-primary fw-bold">Initial click Count: {count}</h2>
+        <div className="d-flex justify-content-center p-3 gap-3">
+          <button className="btn btn-success btn-lg" onClick={increaseCount}>
+            Increase Count
+          </button>
+          <button className="btn btn-danger btn-lg" onClick={decreaseCount}>
+            Decrease Count
+          </button>
+          <button className="btn btn-warning btn-lg" onClick={resetCount}>
+            Reset Count
+          </button>
+        </div>
       </div>
-    </div>
   );
 }
 
